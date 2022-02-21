@@ -21,23 +21,23 @@ const MoviesPage = () => {
   const onSubmit = (event) => {
     event.preventDefault()
     setForm(() => event.target.inputSearch.value) 
-    if (inputValue.length !== 0) {
-     return  history.push({ ...location, search: `?query=${inputValue}` })
-    }
+     if (!inputValue.trim() || searchResult === inputValue) return;
+    
+     history.push({ ...location, search: `?query=${inputValue}` })
+    
 
     resetForm()
   }
   
   
-  const onInputValue = (event) =>
-    
-    setInputValue(() => event.target.value)
+  const onInputValue = (event) => setInputValue(() => event.target.value)
 
-  
+  console.log(inf);
   useEffect(() => {
-    if (location.search.includes("query") || inputValue.length !== 0) {
-      return (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => error))
-    }
+    inf && (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => "error"))
+    // if (inputValue.length !== 0 ||location.search.includes("query")) {
+    //   return (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => "error"))
+    // }
   }, [inf])
 
 
