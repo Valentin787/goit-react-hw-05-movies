@@ -1,0 +1,150 @@
+.titleHomePage {
+  padding-left: 25px;
+  color: rgb(52, 53, 53);
+  font-family: Marker Felt, fantasy;
+  text-decoration: underline;
+}
+.containerHomePage {
+  text-decoration: none;
+  list-style: none;
+  width: 30%;
+}
+.filmLink {
+  text-decoration: none;
+}
+.titleFilmHomePage {
+  color: black;
+  font-family: Bradley Hand, cursive;
+  font-size: 20px;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+.titleFilmHomePage:hover {
+  text-decoration: underline;
+  color: rgb(71, 131, 235);
+}
+.buttonBack {
+  width: 9%;
+  border-radius: 10px;
+  font-family: Marker Felt, fantasy;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: rgb(134, 157, 235);
+}
+.buttonBack:hover {
+  background-color: rgb(193, 65, 90);
+}
+.filmWrap {
+  display: flex;
+}
+.filmImg {
+  border-radius: 35px;
+  box-shadow: 10px 10px 10px rgb(148, 174, 196);
+  margin-left: 20px;
+}
+
+.filmOverview {
+  list-style: none;
+  width: 50%;
+}
+.filmTitleOverview {
+  font-family: Andale Mono, monospace;
+  letter-spacing: -2px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+  margin-bottom: none;
+}
+.filmTitleOverview:hover {
+  color: rgb(44, 172, 97);
+  text-decoration: underline;
+}
+.scoreTitle {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+.overviewTitle {
+  font-family: Gill Sans, sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.overviewText {
+  font-family: Gill Sans, sans-serif;
+}
+.genresTitle {
+  font-family: Gill Sans, sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.textGenres {
+  font-family: Gill Sans, sans-serif;
+}
+.aditionalWrap {
+  display: block;
+  justify-content: space-around;
+  width: 20%;
+}
+.aditionalTitle {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  letter-spacing: -1px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 30px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.castTitle {
+  font-family: Gill Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+  cursor: pointer;
+
+  border: 2px solid black;
+  padding: 8px 22px;
+  border-radius: 10px;
+}
+.castTitle:hover {
+  color: rgb(44, 172, 97);
+  text-decoration: underline;
+}
+.reviewsTitle {
+  font-family: Gill Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+  margin-left: 30px;
+  cursor: pointer;
+
+  border: 2px solid black;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.reviewsTitle:hover {
+  color: rgb(44, 172, 97);
+  text-decoration: underline;
+}
+.inputSearch {
+  margin-left: 20px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.btnSearch {
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-family: Gill Sans, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}

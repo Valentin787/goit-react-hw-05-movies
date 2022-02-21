@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+
+  align-items: flex-start;
+  border-bottom: 1.5px solid grey;
+  border-radius: 10px;
+  padding-left: 25px;
+  box-shadow: 10px 8px 8px rgba(88, 165, 43, 0.2);
+  font-family: Trattatello, fantasy;
+  letter-spacing: 2px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 10px;
+  color: rgb(71, 131, 235);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.activeLink {
+  composes: link;
+  color: rgb(44, 172, 97);
+}

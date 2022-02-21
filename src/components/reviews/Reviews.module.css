@@ -1,0 +1,19 @@
+.container {
+  list-style: none;
+  width: 1000px;
+  display: inline-block;
+}
+.authorTitle {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.textReviews {
+  font-family: Gill Sans, sans-serif;
+  letter-spacing: 0.5px;
+}
+.authorDate {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+}

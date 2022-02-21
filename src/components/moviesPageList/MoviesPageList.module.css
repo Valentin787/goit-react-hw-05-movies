@@ -1,0 +1,27 @@
+ul {
+  list-style: none;
+}
+.linkFilm {
+  text-decoration: none;
+}
+.titleNotFound {
+  font-family: Gill Sans, sans-serif;
+}
+.titleFilm {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+.titleFilm:hover {
+  color: rgb(44, 172, 97);
+  text-decoration: underline;
+}
+.img {
+  border-radius: 20px;
+}
+.date {
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
