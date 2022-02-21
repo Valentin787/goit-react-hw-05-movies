@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useHistory, useLocation } from 'react-router-dom';
-import { fetchKeyword } from '../services/apiFetch';
+// import { fetchKeyword } from '../services/apiFetch';
+import * as api from '../services/apiFetch'
 import MoviesPageList from '../components/moviesPageList/MoviesPageList';
 import NotFoundPage from "../components/notFoundPage/NotFoundPage";
 import s from './Start.module.css';
@@ -21,8 +22,7 @@ const MoviesPage = () => {
   const onSubmit = (event) => {
     event.preventDefault()
     setForm(() => event.target.inputSearch.value) 
-     if (!inputValue.trim() || searchResult === inputValue) return;
-    
+     if (!inputValue.trim() || searchResult === inputValue) return; 
      history.push({ ...location, search: `?query=${inputValue}` })
     
 
@@ -32,9 +32,9 @@ const MoviesPage = () => {
   
   const onInputValue = (event) => setInputValue(() => event.target.value)
 
-  console.log(inf);
-  useEffect(() => {
-    inf && (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => "error"))
+   useEffect(() => {
+    inf && api.fetchKeyword(inf).then(({data}) =>  setSearchResult(data.results)
+    ).catch(error => "error")
   }, [inf])
 
 
@@ -52,7 +52,8 @@ const MoviesPage = () => {
           Search
         </button>
       </form>
-      {searchResult.length > 1?(<MoviesPageList list={searchResult} />): (<NotFoundPage/>)}
+      {searchResult.length !== 0 ? (<MoviesPageList list={searchResult} />) : (<NotFoundPage />)}
+      
       </>
   )
 }

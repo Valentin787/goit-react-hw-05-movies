@@ -1,10 +1,16 @@
+import axios from 'axios';
+
 const BASE_URL = "https://api.themoviedb.org/3/";
 const apiKey = "?api_key=928c2f5edafa2935d4eead846b7dfe7d";
 const trendingFetch = "/trending/movie/week";
 const searchId = "movie/"
 const cast = "/credits"
 const reviews = "/reviews"
-const search = "search/"
+// const search = "search/"
+
+
+axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
+axios.defaults.params = { api_key: '928c2f5edafa2935d4eead846b7dfe7d' };
 
 export async function firstFetch() {
   const response = await fetch(BASE_URL + trendingFetch + apiKey)
@@ -30,10 +36,15 @@ export async function fetchReviews(id) {
   
 }
 
-export async function fetchKeyword(keyword) {
-  const response = await fetch(`${BASE_URL}${search}${searchId}${apiKey}&query=${keyword}`)
-  return response.ok?await response.json():Promise.reject(new Error('Not found'))
+// export async function fetchKeyword(keyword) {
+//   const response = await fetch(`${BASE_URL}${search}${searchId}${apiKey}&query=${keyword}`)
+//   return response.ok?await response.json():Promise.reject(new Error('Not found'))
   
+// }
+export  async function fetchKeyword(query) {
+  const RES = 'search/movie';
+  const params = { query };
+  const data = await axios.get(RES, { params });
+  return data
+
 }
-
-

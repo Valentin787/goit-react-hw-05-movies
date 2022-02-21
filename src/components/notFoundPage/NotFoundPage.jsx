@@ -4,7 +4,7 @@ import s from './NotFoundPage.module.css'
 const NotFoundPage = () => {
   return (
     <div className={s.wrap}>
-      <img className={s.img} width="120" src={defaultImages}/>
+      <img className={s.img} width="120" src={defaultImages} alt=""/>
       <h2 className={s.title}>
        Please, enter the title :( 
       </h2>
