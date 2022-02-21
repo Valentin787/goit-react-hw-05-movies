@@ -35,9 +35,6 @@ const MoviesPage = () => {
   console.log(inf);
   useEffect(() => {
     inf && (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => "error"))
-    // if (inputValue.length !== 0 ||location.search.includes("query")) {
-    //   return (fetchKeyword(inf).then(data => setSearchResult(data.results)).catch(error => "error"))
-    // }
   }, [inf])
 
 
